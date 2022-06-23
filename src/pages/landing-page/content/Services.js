@@ -6,7 +6,7 @@ import "./styles/Services.scss";
 function Services() {
   return (
     <div className="wrapper-services">
-      <div>
+      <div className="wrapper-services__title">
         <p>How it works.</p>
         <p>This is how our products works </p>
       </div>
@@ -19,28 +19,28 @@ function Services() {
           margin: "10%",
         }}
       >
-        <div>
+        <div className="wrapper-services__items">
           <i style={{ marginRight: "10px", width: "20px", height: "20px" }}>
             <LocationIcon />
           </i>
-          <p>Find Car</p>
-          <p>
+          <p className="item-title">Find Car</p>
+          <p className="item-content">
             Our cars are located at prime areas where by there won’t be problem
             with transportation
           </p>
         </div>
-        <div>
+        <div className="wrapper-services__items">
           <img src={Payment} alt="" />
-          <p>Make payments</p>
-          <p>
+          <p className="item-title">Make payments</p>
+          <p className="item-content">
             Our estates comes with good network,portable water , 24hrs light and
             round the clock security.
           </p>
         </div>
-        <div>
+        <div className="wrapper-services__items">
           <img src={LockImg} alt="" />
-          <p>Make it Official</p>
-          <p>
+          <p className="item-title">Make it Official</p>
+          <p className="item-content">
             We have been in business for over 32 years,for client outside the
             country you can trust us to deliver well.{" "}
           </p>
