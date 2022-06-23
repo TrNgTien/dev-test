@@ -1,0 +1,230 @@
+@import "../../../theme/mixin.scss";
+.wrapper-filter {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    bottom: -8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: #fafafa;
+    border: 1px solid var(--divider);
+    box-shadow: 0px -2px 10px rgb(35 35 35 / 10%), 0px 15px 25px rgb(35 35 35 / 8%);
+    border-radius: 10px;
+    & > div:not(:last-child) {
+        width: calc(100% / 4);
+        padding: 10px;
+        padding: 3rem;
+    }
+    & > div > p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--text-color);
+    }
+    .wrapper-filter__used-car {
+        position: relative;
+        .wrapper-dropdown__cars-radio {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            box-shadow: 0px 0px 1px rgb(48 49 51 / 5%), 0px 8px 16px rgb(48 49 51 / 10%);
+            border-radius: 5px;
+            background-color: white;
+            padding: 3rem;
+            left: 2%;
+            & > div {
+                display: flex;
+                align-items: center;
+                & > input[type="radio"] {
+                    accent-color: var(--red-primary);
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .wrapper-filter__price-range {
+        position: relative;
+        .filter-bar__price-range {
+            .wrapper-price {
+                display: flex;
+                align-items: center;
+                & > p {
+                    @include filterType();
+                    margin-left: 10px;
+                }
+            }
+            .divider-range {
+                border-bottom: 1px solid #5f5f5f;
+                height: 0px;
+                width: 16px;
+            }
+        }
+        .wrapper-dropdown__price-range {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            box-shadow: 0px 0px 1px rgb(48 49 51 / 5%), 0px 8px 16px rgb(48 49 51 / 10%);
+            border-radius: 5px;
+            background-color: white;
+            padding: 2rem;
+            left: 2%;
+            & > p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--text-color);
+                margin-bottom: 2rem;
+            }
+
+            .wrapper-dropdown__price {
+                display: flex;
+                align-items: center;
+                .wrapper-dropdown__price--min {
+                    @include inputRange();
+
+                    & > div {
+                        display: flex;
+                        & > input {
+                            border: none;
+                            outline: none;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .wrapper-dropdown__divider-range {
+                    border-top: 2px solid #5f5f5f;
+                    height: 0px;
+                    width: 10px;
+                    margin: 0px 1rem;
+                }
+                .wrapper-dropdown__price--max {
+                    @include inputRange();
+                    & > div {
+                        display: flex;
+                        & > input {
+                            border: none;
+                            outline: none;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            .wrapper-dropdown__operator {
+                display: flex;
+                align-items: center;
+                border-top: 1px solid var(--divider);
+                justify-content: space-between;
+                padding-top: 3rem;
+                margin-top: 2rem;
+                & > p {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #b4b4b4;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+                & > button {
+                    @include btn();
+                    border-radius: 5px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .filter-bar__price-range,
+    .filter-bar__vehicle-type,
+    .filter-bar__used-car {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+        & > p {
+            @include filterType();
+        }
+    }
+    .wrapper-filter__vehicle-type {
+        position: relative;
+        .wrapper-dropdown__vehicle-type {
+            position: absolute;
+            top: 100%;
+            box-shadow: 0px 0px 1px rgb(48 49 51 / 5%), 0px 8px 16px rgb(48 49 51 / 10%);
+            border-radius: 5px;
+            background-color: white;
+            padding: 3rem;
+            left: 2%;
+            & > p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--text-color);
+            }
+            & > div {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                & > div {
+                    display: flex;
+                    align-items: center;
+                    margin: 1rem;
+                    white-space: nowrap;
+                    & > input {
+                        margin-right: 10px;
+                    }
+                    & > label:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .wrapper-dropdown__operator {
+                display: flex;
+                align-items: center;
+                border-top: 1px solid var(--divider);
+                justify-content: space-between;
+                padding-top: 3rem;
+                margin-top: 2rem;
+                & > p {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #b4b4b4;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+                & > button {
+                    @include btn();
+                    border-radius: 5px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .wrapper-search {
+        padding: 3rem;
+        width: 20%;
+        & > button {
+            @include btn();
+            border-radius: 5px;
+            padding: 2rem;
+            width: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

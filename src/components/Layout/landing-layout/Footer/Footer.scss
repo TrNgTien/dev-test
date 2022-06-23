@@ -1,0 +1,112 @@
+@import "../../../../theme/mixin.scss";
+.wrapper-footer__info-items {
+    display: flex;
+    padding: 5rem;
+}
+.divider-vertical {
+    border-top: 1px solid var(--divider);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper_terms-and-conditions {
+    display: flex;
+    .wrapper__polices {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 4.5%;
+        & > p {
+            white-space: nowrap;
+            margin-left: 10%;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--text-color);
+        }
+        &:first-child {
+            white-space: nowrap;
+        }
+    }
+    & > p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #8c8c8c;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+}
+.list-options {
+    display: flex;
+    & > div {
+        margin: 0px 33px;
+        & > p {
+            margin: 10px 0px;
+        }
+        & > p:first-child {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--text-color);
+        }
+    }
+
+    .no-wrap {
+        white-space: nowrap;
+    }
+}
+.social-media__wrapper {
+    & > p {
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--text-color);
+        margin: 10px 0px;
+    }
+    .social-media__subscribe-input {
+        & > input {
+            background: #ffffff;
+            border: 1px solid #f1f1f1;
+            border-radius: 5px 0px 0px 5px;
+            padding: 8px;
+            outline: none;
+            padding-left: 14px;
+            margin: 18px 0px;
+            width: 70%;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: #b4b4b4;
+            }
+        }
+        & > button {
+            @include btn();
+            border-radius: 0px 5px 5px 0px;
+            padding: 10px;
+            width: 30%;
+        }
+    }
+    .social-media__icons {
+        display: flex;
+        & > p {
+            margin-right: 10px;
+        }
+        & > i {
+            margin: 0px 5px;
+        }
+    }
+}
+.wrapper-sologan {
+    display: flex;
+    margin: 20px 0px 40px 4.5%;
+    align-items: flex-end;
+    & > p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+    }
+}
