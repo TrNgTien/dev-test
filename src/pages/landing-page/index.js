@@ -1,11 +1,12 @@
 import React, { memo } from "react";
 import { LandingPageLayout } from "@components/Layout";
-import ListCar from "./content/ListCar";
-import Description from "./Description/Description.js";
-import Badge from "./badge/Badge.js";
-import FilterBar from "./filter-bar/FilterBar.js";
-import { DESCRIPTION } from "@src/constants/ConstantData.js";
-import Services from "./content/Services.js";
+import ListCar from "./Content/ListCar";
+import Description from "./Description/Description";
+import Badge from "./Badge/Badge";
+import FilterBar from "./filter-bar/FilterBar";
+import { DESCRIPTION } from "@src/constants/ConstantData";
+import Services from "./Content/Services";
+import FeaturedVehicle from "./featured-vehicles/FeaturedVehicles";
 function LandingPage() {
   return (
     <LandingPageLayout>
@@ -24,6 +25,7 @@ function LandingPage() {
       </Badge>
       <ListCar />
       <Services />
+      <FeaturedVehicle />
       <Description description={DESCRIPTION} />
       <Badge>
         <div className="badge-wrapper__content">

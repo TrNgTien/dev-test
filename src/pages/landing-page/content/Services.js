@@ -10,15 +10,7 @@ function Services() {
         <p>How it works.</p>
         <p>This is how our products works </p>
       </div>
-      <div
-        style={{
-          backgroundColor: "#232323",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "10%",
-        }}
-      >
+      <div className="wrapper-services__content">
         <div className="wrapper-services__items">
           <i style={{ marginRight: "10px", width: "20px", height: "20px" }}>
             <LocationIcon />
@@ -42,7 +34,7 @@ function Services() {
           <p className="item-title">Make it Official</p>
           <p className="item-content">
             We have been in business for over 32 years,for client outside the
-            country you can trust us to deliver well.{" "}
+            country you can trust us to deliver well.
           </p>
         </div>
       </div>

@@ -38,7 +38,7 @@
                 display: flex;
                 align-items: center;
                 & > input[type="radio"] {
-                    accent-color: var(--red-primary);
+                    accent-color: var(--primary-color);
                     margin-right: 10px;
                 }
             }
@@ -84,7 +84,6 @@
                 align-items: center;
                 .wrapper-dropdown__price--min {
                     @include inputRange();
-
                     & > div {
                         display: flex;
                         & > input {
@@ -221,7 +220,8 @@
             @include btn();
             border-radius: 5px;
             padding: 2rem;
-            width: 100%;
+            width: 70%;
+            float: right;
             font-weight: 700;
             font-size: 16px;
             line-height: 19px;

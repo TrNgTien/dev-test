@@ -1,5 +1,5 @@
 @mixin btn() {
-    background-color: var(--red-primary);
+    background-color: var(--primary-color);
     color: var(--white);
     border: none;
     &:hover {
