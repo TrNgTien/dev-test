@@ -1,0 +1,92 @@
+.list-brand__wrapper {
+    overflow-y: auto;
+    height: 75%;
+    .list-brand__wrapper-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        .radio-check {
+            width: 24px;
+            height: 24px;
+        }
+        & > img {
+            width: 64px;
+            height: 64px;
+        }
+        .list-brand__status--active {
+            border-left: 2px solid var(--active-color);
+            height: 8rem;
+        }
+        .list-brand__status--inactive {
+            border-left: 2px solid var(--inactive-color);
+            height: 8rem;
+            margin-left: 10px;
+        }
+        .list-brand__car-info {
+            width: 30%;
+            .list-brand__car-stats {
+                display: flex;
+                align-items: center;
+                & > p:first-child {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 40%;
+                    white-space: nowrap;
+                }
+                .divider {
+                    background: #e3e3e3;
+                    width: 1px;
+                    height: 16px;
+                    margin: 0px 20px;
+                }
+                & > p:last-child {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: var(--secondary-color);
+                }
+            }
+        }
+        .list-brand__status-dot {
+            display: flex;
+            align-items: center;
+            .status-color--active {
+                color: var(--active--text-color);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .status-color--inactive {
+                color: var(--inactive-color);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .list-brand__status-dot--active {
+                background-color: var(--active-color);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            .list-brand__status-dot--inactive {
+                background-color: var(--inactive-color);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+        & > button {
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 4px;
+            background-color: var(--white);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--text-color);
+        }
+    }
+}

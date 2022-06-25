@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
@@ -12,4 +12,4 @@ function MainLayout(props) {
   );
 }
 
-export default memo(MainLayout);
+export default MainLayout;

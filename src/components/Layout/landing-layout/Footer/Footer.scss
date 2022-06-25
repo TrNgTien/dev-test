@@ -83,7 +83,7 @@
             }
         }
         & > button {
-            @include btn();
+            @include btnPrimary();
             border-radius: 0px 5px 5px 0px;
             padding: 10px;
             width: 30%;

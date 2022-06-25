@@ -1,10 +1,22 @@
-@mixin btn() {
+@mixin btnPrimary() {
     background-color: var(--primary-color);
     color: var(--white);
     border: none;
     &:hover {
         cursor: pointer;
         background-color: #c13036;
+    }
+    &:active {
+        opacity: 0.7;
+    }
+}
+@mixin btnSecondary() {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: #275fb9;
     }
     &:active {
         opacity: 0.7;

@@ -232,3 +232,53 @@ export const FEATURED_VEHICLES = [
     type: "Lekki,phase 2",
   },
 ];
+export const LIST_CAR_BRAND = [
+  {
+    id: 1,
+    branding: "Toyota",
+    carName: "Jeep Grand Cherokee",
+    numberOfModals: "1200 Models",
+    timeUpdated: "25/12/2022",
+    status: "Active",
+  },
+  {
+    id: 2,
+    branding: "BMW",
+    carName: "Brand description too long",
+    numberOfModals: "800 Models",
+    timeUpdated: "25/12/2022",
+    status: "Inactive",
+  },
+  {
+    id: 3,
+    branding: "MAZDA",
+    carName: "Brand description too long",
+    numberOfModals: "800 Models",
+    timeUpdated: "25/12/2022",
+    status: "Active",
+  },
+  {
+    id: 4,
+    branding: "Hyundai",
+    carName: "Brand description too long",
+    numberOfModals: "800 Models",
+    timeUpdated: "25/12/2022",
+    status: "Active",
+  },
+  {
+    id: 5,
+    branding: "KIA",
+    carName: "Brand description too long",
+    numberOfModals: "800 Models",
+    timeUpdated: "25/12/2022",
+    status: "Inactive",
+  },
+  {
+    id: 6,
+    branding: "Nissan",
+    carName: "Brand description too long",
+    numberOfModals: "800 Models",
+    timeUpdated: "25/12/2022",
+    status: "Inactive",
+  },
+];

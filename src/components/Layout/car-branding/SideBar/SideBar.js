@@ -6,25 +6,13 @@ import { ReactComponent as SettingIcon } from "@assets/icons/setting.svg";
 import { ReactComponent as CarIcon } from "@assets/icons/car-icon.svg";
 import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
 import "./SideBar.scss";
+
 function SideBar() {
-  const [isChoosingItem, setIsChoosingItem] = useState(false);
-  const [itemChose, setItemChose] = useState("");
   const ListTasks = () => {
     const tasks = ["Tasks", "Modules", "Notification"];
     return tasks.map((task, index) => {
       return (
-        <div
-          key={index}
-          className={`${"wrapper-sidebar__task-item"} ${
-            !isChoosingItem &&
-            itemChose === task &&
-            "wrapper-sidebar__item--active"
-          } `}
-          onClick={(e) => {
-            setIsChoosingItem(false);
-            setItemChose(e.target.innerText);
-          }}
-        >
+        <div key={index} className="wrapper-sidebar__task-item">
           <TaskIcon />
           <p>{task}</p>
         </div>
@@ -37,15 +25,7 @@ function SideBar() {
         <UCARSLogo className="logo" />
         <MenuFold />
       </div>
-      <div
-        className={`${"wrapper-sidebar__task-item"} ${
-          isChoosingItem && "wrapper-sidebar__item--active"
-        } `}
-        onClick={() => {
-          setItemChose("");
-          setIsChoosingItem(true);
-        }}
-      >
+      <div className="wrapper-sidebar__task-item wrapper-sidebar__item--active">
         <CarIcon />
         <p>Car Brand</p>
       </div>
@@ -54,7 +34,7 @@ function SideBar() {
           <TaskIcon />
           <p>Folder</p>
         </div>
-        <ArrowDown />
+        <ArrowDown className="arrow"/>
       </div>
       <ListTasks />
       <div>

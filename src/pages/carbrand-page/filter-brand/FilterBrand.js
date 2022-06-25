@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
+import { ReactComponent as PlusIcon } from "@assets/icons/plus.svg";
+import { ReactComponent as SearchIcon } from "@assets/icons/search.svg";
+import "./FilterBrand.scss";
 
 function FilterBrand() {
   return (
-    <div>
-      <p>CAR BRANDS LIST</p>
-      <div>
-        <p>search</p>
-        <input type="text" placeholder="Search car brand" />
+    <div className="wrapper-filter-branding">
+      <div className="wrapper-filter__operation-filter">
+        <p>CAR BRANDS LIST</p>
+        <div className="wrapper-select-brand">
+          <ArrowDown />
+          <select className="select-brand">
+            <option hidden>View All</option>
+            <option value="all">All</option>
+            <option value="last updated">Last Updated</option>
+            <option value="brand name">Brand Name</option>
+            <option value="number of models">Number of Models</option>
+          </select>
+        </div>
+        <div className="wrapper-search">
+          <SearchIcon />
+          <input type="text" placeholder="Search car brand" />
+        </div>
       </div>
-      <div>
-        <p>plus</p>
+      <div className="wrapper-add-brand">
+        <PlusIcon />
         <p>Add Brand</p>
       </div>
     </div>

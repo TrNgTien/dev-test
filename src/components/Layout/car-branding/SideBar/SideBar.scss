@@ -54,6 +54,9 @@
         & > svg {
             margin-right: 10%;
         }
+        .arrow{
+            transform: rotate(180deg);
+        }
     }
     .wrapper-sidebar__item--active {
         background-color: #0f5edd;

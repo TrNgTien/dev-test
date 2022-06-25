@@ -1,11 +1,13 @@
-import CarBrandingLayout from "@src/components/Layout/car-branding/CarBrandingLayout.js";
+import { CarBrandLayout } from "@components/Layout";
 import React from "react";
-
+import FilterBrand from "./filter-brand/FilterBrand";
+import ListCarBrand from "./list-car/ListCarBrand";
 function index() {
   return (
-    <CarBrandingLayout>
-      <div>Children</div>
-    </CarBrandingLayout>
+    <CarBrandLayout>
+      <FilterBrand />
+      <ListCarBrand/>
+    </CarBrandLayout>
   );
 }
 
