@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { LIST_CAR_BRAND } from "@constants/ConstantData";
 import BMWLogo from "@assets/images/bmw-brand.png";
 import KIALogo from "@assets/images/kia-logo.png";
@@ -6,9 +6,11 @@ import NissanLogo from "@assets/images/nissan-logo.png";
 import ToyotaLogo from "@assets/images/toyota-logo.png";
 import MazdaLogo from "@assets/images/mazda-logo.png";
 import HyundaiLogo from "@assets/images/hyundai-logo.png";
+import { ViewDetailContext } from "@contexts/ViewDetailContext";
 
 import "./ListCarBrand.scss";
 function ListCarBrand() {
+  const viewDetailContext = useContext(ViewDetailContext);
   const renderLogo = (brandName) => {
     switch (brandName) {
       case "BMW":
@@ -77,7 +79,9 @@ function ListCarBrand() {
                   {status}
                 </p>
               </div>
-              <button>View Details</button>
+              <button onClick={viewDetailContext.toggleViewDetail}>
+                View Details
+              </button>
             </div>
           );
         }

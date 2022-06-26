@@ -8,7 +8,7 @@
     margin-left: 5%;
     margin-right: 5%;
     background: #fafafa;
-    border: 1px solid var(--divider);
+    border: 1px solid var(--divider-color);
     box-shadow: 0px -2px 10px rgb(35 35 35 / 10%), 0px 15px 25px rgb(35 35 35 / 8%);
     border-radius: 10px;
     & > div:not(:last-child) {
@@ -114,7 +114,7 @@
             .wrapper-dropdown__operator {
                 display: flex;
                 align-items: center;
-                border-top: 1px solid var(--divider);
+                border-top: 1px solid var(--divider-color);
                 justify-content: space-between;
                 padding-top: 3rem;
                 margin-top: 2rem;
@@ -188,7 +188,7 @@
             .wrapper-dropdown__operator {
                 display: flex;
                 align-items: center;
-                border-top: 1px solid var(--divider);
+                border-top: 1px solid var(--divider-color);
                 justify-content: space-between;
                 padding-top: 3rem;
                 margin-top: 2rem;

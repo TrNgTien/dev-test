@@ -1,14 +1,23 @@
+import React, { useContext } from "react";
 import { CarBrandLayout } from "@components/Layout";
-import React from "react";
 import FilterBrand from "./filter-brand/FilterBrand";
+import { ViewDetailContext } from "@contexts/ViewDetailContext";
 import ListCarBrand from "./list-car/ListCarBrand";
-function index() {
+import ViewDetail from "./view-detail/ViewDetail";
+function CarBrandPage() {
+  const viewDetailContext = useContext(ViewDetailContext);
   return (
     <CarBrandLayout>
-      <FilterBrand />
-      <ListCarBrand />
+      {!viewDetailContext.viewDetail ? (
+        <>
+          <FilterBrand />
+          <ListCarBrand />
+        </>
+      ) : (
+        <ViewDetail />
+      )}
     </CarBrandLayout>
   );
 }
 
-export default index;
+export default CarBrandPage;

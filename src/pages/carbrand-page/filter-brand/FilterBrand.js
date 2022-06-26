@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { PopUpContext } from "@contexts/PopUpContext";
 import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
 import { ReactComponent as PlusIcon } from "@assets/icons/plus.svg";
 import { ReactComponent as SearchIcon } from "@assets/icons/search.svg";
 import "./FilterBrand.scss";
 
 function FilterBrand() {
+  const popUpContext = useContext(PopUpContext);
   return (
     <div className="wrapper-filter-branding">
       <div className="wrapper-filter__operation-filter">
@@ -24,7 +26,7 @@ function FilterBrand() {
           <input type="text" placeholder="Search car brand" />
         </div>
       </div>
-      <div className="wrapper-add-brand">
+      <div className="wrapper-add-brand" onClick={popUpContext.togglePopUpOn} >
         <PlusIcon />
         <p>Add Brand</p>
       </div>
