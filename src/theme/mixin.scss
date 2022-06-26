@@ -1,7 +1,22 @@
+@mixin btnNormal() {
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid #b4b4b4;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        opacity: 0.7;
+    }
+}
 @mixin btnPrimary() {
     background-color: var(--primary-color);
     color: var(--white);
     border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
     &:hover {
         cursor: pointer;
         background-color: #c13036;

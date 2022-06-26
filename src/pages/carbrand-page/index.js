@@ -6,7 +6,7 @@ function index() {
   return (
     <CarBrandLayout>
       <FilterBrand />
-      <ListCarBrand/>
+      <ListCarBrand />
     </CarBrandLayout>
   );
 }
