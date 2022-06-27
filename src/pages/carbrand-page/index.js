@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { CarBrandLayout } from "@components/Layout";
 import FilterBrand from "./filter-brand/FilterBrand";
-import { ViewDetailContext } from "@contexts/ViewDetailContext";
+import { BrandContext } from "@contexts/BrandContext";
 import ListCarBrand from "./list-car/ListCarBrand";
 import ViewDetail from "./view-detail/ViewDetail";
 function CarBrandPage() {
-  const viewDetailContext = useContext(ViewDetailContext);
+  const { viewDetail } = useContext(BrandContext);
   return (
     <CarBrandLayout>
-      {!viewDetailContext.viewDetail ? (
+      {!viewDetail ? (
         <>
           <FilterBrand />
           <ListCarBrand />

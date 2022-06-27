@@ -2,18 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import MainRoutes from "./routes/MainRoutes";
 import { PopUpProvider } from "@contexts/PopUpContext";
+import { BrandProvider } from "@contexts/BrandContext";
+
 import GlobalStyles from "@components/GlobalStyles";
-import {
-  ViewDetailProvider,
-} from "@contexts/ViewDetailContext";
+
 ReactDOM.render(
   <React.StrictMode>
     <PopUpProvider>
-      <ViewDetailProvider>
+      <BrandProvider>
         <GlobalStyles>
           <MainRoutes />
         </GlobalStyles>
-      </ViewDetailProvider>
+      </BrandProvider>
     </PopUpProvider>
   </React.StrictMode>,
   document.getElementById("root")

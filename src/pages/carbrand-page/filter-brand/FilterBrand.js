@@ -1,32 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { PopUpContext } from "@contexts/PopUpContext";
+import { BrandContext } from "@contexts/BrandContext";
 import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
 import { ReactComponent as PlusIcon } from "@assets/icons/plus.svg";
 import { ReactComponent as SearchIcon } from "@assets/icons/search.svg";
 import "./FilterBrand.scss";
-
+import { SelectTypeView } from "@components/custom-selects/CustomSelect";
 function FilterBrand() {
-  const popUpContext = useContext(PopUpContext);
+  const { brandSearched, searchBrand } = useContext(BrandContext);
+  const { togglePopUpOn } = useContext(PopUpContext);
+  const handleSearchBrand = (e) => {
+    searchBrand(e.target.value);
+  };
   return (
     <div className="wrapper-filter-branding">
       <div className="wrapper-filter__operation-filter">
         <p>CAR BRANDS LIST</p>
-        <div className="wrapper-select-brand">
-          <ArrowDown />
-          <select className="select-brand">
-            <option hidden>View All</option>
-            <option value="all">All</option>
-            <option value="last updated">Last Updated</option>
-            <option value="brand name">Brand Name</option>
-            <option value="number of models">Number of Models</option>
-          </select>
-        </div>
+        <SelectTypeView />
         <div className="wrapper-search">
           <SearchIcon />
-          <input type="text" placeholder="Search car brand" />
+          <input
+            type="text"
+            onChange={handleSearchBrand}
+            placeholder="Search car brand"
+            value={brandSearched}
+          />
         </div>
       </div>
-      <div className="wrapper-add-brand" onClick={popUpContext.togglePopUpOn} >
+      <div className="wrapper-add-brand" onClick={togglePopUpOn}>
         <PlusIcon />
         <p>Add Brand</p>
       </div>

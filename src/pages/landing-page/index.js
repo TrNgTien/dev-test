@@ -1,11 +1,11 @@
 import React, { memo } from "react";
 import { LandingPageLayout } from "@components/Layout";
+import { DESCRIPTION } from "@constants/ConstantData";
 import ListCar from "./Content/ListCar";
+import Services from "./Content/Services";
 import Description from "./Description/Description";
 import Badge from "./Badge/Badge";
 import FilterBar from "./filter-bar/FilterBar";
-import { DESCRIPTION } from "@src/constants/ConstantData";
-import Services from "./Content/Services";
 import FeaturedVehicle from "./featured-vehicles/FeaturedVehicles";
 function LandingPage() {
   return (

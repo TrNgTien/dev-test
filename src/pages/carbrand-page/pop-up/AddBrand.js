@@ -1,12 +1,10 @@
 import React, { useState, useContext } from "react";
 import { ReactComponent as CloseIcon } from "@assets/icons/close-icon.svg";
 import { ReactComponent as PlusIcon } from "@assets/icons/plus-black.svg";
-import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
 import { PopUpContext } from "@contexts/PopUpContext";
-
+import { SelectStatus } from "@components/custom-selects/CustomSelect";
 import "./AddBrand.scss";
 function AddBrand() {
-  const [isOpenStatus, setIsOpenStatus] = useState(false);
   const [imageBase64, setImageBase64] = useState("");
   const popUpContext = useContext(PopUpContext);
 
@@ -66,35 +64,9 @@ function AddBrand() {
               </div>
               <div className="add-brand__status-dropdown">
                 <p>Brand Status</p>
-                <div
-                  className="wrapper-dropdown__status-brand"
-                  onClick={() => setIsOpenStatus(!isOpenStatus)}
-                >
-                  <p className="dot-status--active">&nbsp;</p>
-                  <p className="status-title">Active</p>
-                  <ArrowDown />
-                </div>
-                <div className="dropdown-status">
-                  <div
-                    className={
-                      isOpenStatus
-                        ? "wrapper-dropdown__status"
-                        : "wrapper-dropdown__status--none "
-                    }
-                  >
-                    <div className="option-status--active">
-                      <p className="dot-status--active">&nbsp;</p>
-                      <p>Active</p>
-                    </div>
-                    <div className="option-status--inactive">
-                      <p className="dot-status--inactive">&nbsp;</p>
-                      <p>Inactive</p>
-                    </div>
-                  </div>
-                </div>
+                <SelectStatus isAddBrand={true} />
               </div>
             </div>
-
             <div className="add-brand__description">
               <p>Brand Description</p>
               <textarea placeholder="Input content" />

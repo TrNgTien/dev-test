@@ -13,12 +13,6 @@ function Header() {
         <img
           src={CarType1}
           alt="avatar"
-          style={{
-            borderRadius: "50%",
-            border: "1px solid",
-            height: "32px",
-            width: "32px",
-          }}
         />
         <p>Admin</p>
         <ArrowDown />

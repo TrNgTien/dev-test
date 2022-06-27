@@ -109,7 +109,7 @@
                     padding-bottom: 10px;
                 }
                 .add-brand__input-detail {
-                    margin-top: 5%;
+                    margin: 5% 0px;
                     display: flex;
 
                     & > input {
@@ -130,7 +130,13 @@
                             border: 1px solid #e3e3e3;
                             border-radius: 4px;
                             outline: none;
-                            padding: 5px;
+                            padding: 10px;
+                            &::placeholder {
+                                color: #8c8c8c;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
                         }
                         & > p {
                             font-weight: 400;
@@ -153,12 +159,29 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        background: #cef7e2;
                         border-radius: 48px;
-                        padding: 2px 15px;
-                        width: 60%;
+                        padding: 5px 15px;
+                        margin-top: 5px;
+                        .status-title--active {
+                            color: var(--active--text-color);
+                        }
+                        .status-title--inactive {
+                            color: var(--inactive-color);
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        &:active {
+                            opacity: 0.7;
+                        }
                         .dot-status--active {
                             background-color: var(--active--text-color);
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                        }
+                        .dot-status--inactive {
+                            background-color: var(--inactive-color);
                             width: 12px;
                             height: 12px;
                             border-radius: 50%;
@@ -193,37 +216,49 @@
                                 border-radius: 48px;
                                 padding: 5px 0px 5px 10px;
                                 margin-bottom: 10px;
-                                & > p {
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                                &:active {
+                                    opacity: 0.7;
+                                }
+                                & > p:last-child {
                                     color: var(--active--text-color);
                                     font-weight: 500;
                                     font-size: 16px;
                                     line-height: 24px;
+                                }
+                                .dot-status--active {
+                                    background-color: var(--active--text-color);
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+                                    margin-right: 10px;
                                 }
                             }
                             .option-status--inactive {
                                 display: flex;
                                 align-items: center;
                                 padding-left: 10px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                                &:active {
+                                    opacity: 0.7;
+                                }
+                                .dot-status--inactive {
+                                    background-color: var(--inactive-color);
+                                    width: 12px;
+                                    height: 12px;
+                                    margin-right: 10px;
+                                    border-radius: 50%;
+                                }
                                 & > p {
                                     color: var(--inactive-color);
                                     font-weight: 500;
                                     font-size: 16px;
                                     line-height: 24px;
                                 }
-                            }
-                            .dot-status--active {
-                                background-color: var(--active--text-color);
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 50%;
-                                margin-right: 10px;
-                            }
-                            .dot-status--inactive {
-                                background-color: var(--inactive-color);
-                                width: 12px;
-                                height: 12px;
-                                margin-right: 10px;
-                                border-radius: 50%;
                             }
                         }
                     }
@@ -243,6 +278,12 @@
                         height: 80px;
                         outline: none;
                         border-color: var(--divider-color);
+                        &::placeholder {
+                            color: #8c8c8c;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
                     }
                 }
             }
