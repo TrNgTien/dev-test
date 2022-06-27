@@ -6,8 +6,8 @@ export default function MainRoutes() {
   return (
     <Router>
       <Routes>
+        <Route path="/carBrand" element={<CarBranding />} />
         <Route path="/" element={<LandingPage />} />
-        <Route path="/car-branding" element={<CarBranding />} />
       </Routes>
     </Router>
   );
