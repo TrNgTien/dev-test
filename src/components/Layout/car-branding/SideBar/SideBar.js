@@ -8,6 +8,7 @@ import { ReactComponent as ArrowDown } from "@assets/icons/drop-down.svg";
 import "./SideBar.scss";
 
 function SideBar() {
+  const [openFolder, setOpenFolder] = useState(false);
   const ListTasks = () => {
     const tasks = ["Tasks", "Modules", "Notification"];
     return tasks.map((task, index) => {
@@ -29,12 +30,33 @@ function SideBar() {
         <CarIcon />
         <p>Car Brand</p>
       </div>
-      <div className="wrapper-sidebar__task-item--folder">
-        <div>
+      <div
+        className={
+          openFolder ? "item-folder" : "item-folder--not-show-children"
+        }
+        style={openFolder ? { marginBottom: "20px" } : null}
+      >
+        <div
+          className="item-folder--main"
+          style={openFolder ? { marginTop: "20px" } : null}
+          onClick={() => setOpenFolder(!openFolder)}
+        >
           <TaskIcon />
           <p>Folder</p>
+          <ArrowDown
+            style={openFolder ? null : { transform: "rotate(180deg)" }}
+          />
         </div>
-        <ArrowDown className="arrow"/>
+        {openFolder && (
+          <div className="item-folder--children">
+            <div className="list-folder-items">
+              <p>Menu Item</p>
+              <p>Menu Item</p>
+              <p>Menu Item</p>
+              <p>Menu Item</p>
+            </div>
+          </div>
+        )}
       </div>
       <ListTasks />
       <div>
